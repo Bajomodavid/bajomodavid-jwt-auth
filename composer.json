@@ -1,0 +1,32 @@
+{
+    "name": "bajomodavid/jwt-auth",
+    "description": "Simple Jwt Authentication for laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bajomo David Mayowa",
+            "email": "bajomomayowa@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^5.5.9 || ^7.0",
+        "lcobucci/jwt": "^3.2",
+        "laravel/framework": "5.6.*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BajomoDavid\\JWTAuth\\JWTAuthServiceProvider"
+            ]
+        },
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "BajomoDavid\\JWTAuth\\": "src/"
+        }
+    }
+}

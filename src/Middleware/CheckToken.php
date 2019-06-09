@@ -20,6 +20,8 @@ class CheckToken
 
         if(!Authenticate::check($token)) return response()->json('Unauthorized', 401);
 
+        $request['user'] = Authenticate::getUser($token);
+
         return $next($request);
     }
 }

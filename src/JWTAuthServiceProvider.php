@@ -16,7 +16,7 @@ class JWTAuthServiceProvider extends ServiceProvider {
     }
     public function register()
     {
-        $this->app->bind('BDUser',function(){
+        $this->app->bind('BDToken',function(){
             return new Token();
        });
     }

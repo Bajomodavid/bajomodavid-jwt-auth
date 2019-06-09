@@ -10,7 +10,6 @@ class BDToken extends Facade{
 
     protected static function getFacadeAccessor(){
 
-        // return Token::class;
-        return 'Token';
+        return Token::class;
     }
 }

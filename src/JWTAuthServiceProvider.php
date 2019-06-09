@@ -2,6 +2,8 @@
 
 namespace BajomoDavid\JWTAuth;
 
+use BajomoDavid\JWTAuth\Provider\Token;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 
 class JWTAuthServiceProvider extends ServiceProvider {
@@ -14,6 +16,8 @@ class JWTAuthServiceProvider extends ServiceProvider {
     }
     public function register()
     {
-
+        $this->app->bind('BDUser',function(){
+            return new Token();
+       });
     }
 }

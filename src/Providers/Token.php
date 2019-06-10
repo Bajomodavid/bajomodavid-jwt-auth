@@ -57,9 +57,9 @@ Class Token {
         return null;
     }
 
-    public function user(Request $request)
+    public function user()
     {
-        if(!$request->user) return null;
-        return $request->user;
+        if(!request()->user) return null;
+        return request()->user;
     }
 }
